@@ -1,0 +1,158 @@
+@import url(reset.css);
+
+
+
+html{
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 12% 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+
+h1 {
+  font-family: "Bree Serif";
+  font-size: 10vh;
+  width:100%;
+  height: 100%;
+  text-align: center;
+  color:lime;
+  background-color: grey;
+}
+
+#buscaminas {
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  background-image: url(../images/fondo1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-levels {
+  margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.header-status {
+  text-align: center;
+}
+
+.tablero{
+  width: 416px;
+  height: 416px;
+  border: 1px solid black;
+  margin-left: 33%;
+  margin-top: 120px;
+}
+
+.tablero div{
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  float: left;
+  background-color: #05abe0;
+  font-size: 30;
+  text-align: center;
+}
+
+table {
+  border: 1px solid black;
+  margin: 0 auto;
+  text-align: left;
+}
+td {
+  padding: 0px;
+  width: 35px;
+  height: 35px;
+  float: left;
+  font-size: 16px;
+  box-sizing: border-box;
+  background: #c0c0c0;
+  border: 2px outset #ececec;
+  text-align: center;
+  pointer-events: auto;
+}
+
+td.bomb {
+    background-color: red;
+    background-image: url(../images/bomb.png);
+    background-size: contain;
+}
+
+td.flag {
+    background-image: url(../images/flag.png);
+    background-size: contain;
+}
+
+td.clicked {
+    background-color: #a5a5a5;
+}
+
+td p {
+  font-size: 28px;
+  font-weight: bold;
+  color: darkgreen;
+  position: relative;
+  top: 10%;
+}
+
+
+/* Buttons styles start */
+button.btn-face {
+    display: inline-block;
+    border: none;
+    padding: 1rem 1rem;
+    margin: 0;
+    text-decoration: none;
+    background-image: url(../images/face.png);
+    background-size: contain;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button.btn {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #0069ed;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button.btn:hover,
+button.btn:focus {
+    background: #0053ba;
+}
+
+button.btn:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button.btn:active {
+    transform: scale(0.99);
+}
+/* Button styles end */

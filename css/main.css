@@ -1,0 +1,341 @@
+@import url(reset.css);
+
+/*Seccion del juego*/
+
+html{
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 12% 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+
+h1 {
+  font-family: "Bree Serif";
+  font-size: 10vh;
+  width:100%;
+  height: 100%;
+  text-align: center;
+  color:lime;
+  background-color: grey;
+}
+
+#contenedor {
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+}
+
+.tateti {
+  display: grid;
+  grid-template-rows: 10% 1fr;
+  grid-gap: 3px;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/fondo1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/********** MENÚ DESPLEGABLE ***********/
+
+/*Menu principal*/
+.menuNavegacion {
+  display: grid;
+}
+
+/*Contenedor opciones del menú*/
+.contenedorMenu {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 100%; 
+  width: 100%;
+  height: 100%;
+
+}
+
+/*li contenedores de botones*/
+.contenedorMenu > li {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/*botones*/
+.opcionMenu {
+  background-color: black;
+  color:lime;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  font-family: "Bree Serif";
+  font-size: 4vh;
+}
+
+/*Contenedor de subMenu*/
+.contenedorSubMenu {
+  background-color: black;
+  display: none;
+  left: 1px;
+  position: absolute;
+  width: 27vh; 
+}
+
+.subItemMenu {
+  display: inline-block;
+  width: 100%;
+}
+
+/*items del submenú (links)*/
+.subItemMenu  a{
+  color: lime;
+  display: block;
+  font-family: "Bree Serif";
+  text-align: left;
+  text-decoration: none;
+  font-size: 3vh;
+}
+
+
+/*Cambiar el color del boton cuando se posicionan sobre él*/
+.opcionMenu:hover {
+  background-color: #3d3d29;
+}
+
+/*Mostrar el submenú cuando se posicionan sobre el boton*/
+.itemMenu:hover .contenedorSubMenu {
+  display: grid;
+  top:100%;
+}
+
+/*Cambiar el color de los subItems cuando se posicionan sobre ellos*/
+.subItemMenu:hover {
+  background-color: #3d3d29;
+}
+
+/************************************/
+
+/********** FORMULARIO CONFIGURACION ***********/
+.seccionForm {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  position: relative;
+}
+
+.formConfiguracion{
+    background-color: lime;
+    border: 2px solid black;
+    display: grid;
+    grid-gap: 5%;
+    overflow: scroll;
+    padding: 1%;
+  }
+
+
+
+/*título formulario*/
+.tituloForm {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/*label jugadores*/
+.labelJugador{
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  font-weight: bold;
+}
+
+/*Input jugadores*/
+.inputJugador{
+  font-size: 1em;
+  height: 1em;
+}
+
+.divTableroForm{
+  display: grid; 
+  grid-template-columns: 30% 1fr;
+}
+
+/*label tablero*/
+.labelTablero{
+  
+  font-weight: bold;
+}
+
+/*label cantidad de fichas*/
+.labelCantidadFichas{
+  display: grid; 
+  grid-template-columns: 30% 10%;
+  font-weight: bold;
+}
+
+/*input cantidad de fichas*/
+.inputCantidadFichas{
+  font-size: 1em;
+  height: 1em;
+}
+
+/*div que agrupa los botones Aceptar y Cancelar del form*/
+.divBotonesForm {
+  margin-top: 5%;
+  display: grid; 
+  grid-template-rows: 100%;
+  grid-template-columns: auto auto;
+  grid-gap: 25%;
+}
+
+/*botones Aceptar y Cancelar de form*/
+.botonForm{
+   font-size: 1.5em;
+   background-color: #e0e0d1;
+   font-weight: bold;
+}
+
+/******************************************/
+
+/********** TABLERO Y TABLA JUGADORES ***********/
+.seccionJuego{
+  font-size: 1em;
+  position: realtive;
+  width: 100%;
+  height: 100%;
+  display:grid;
+}
+
+.contenedorTablero{
+  position: relative;
+  top: 20%;
+  left: 20%;
+  display: grid;
+  width: 60%;
+  height: 60%;
+  
+}
+
+.contenedorImagen{
+  border: 5px solid black;
+}
+
+.tablaJugadores{
+  position: relative;
+  top: 20%;
+  background-color: #ebebe0;
+}
+
+td{
+  border: 2px solid black;
+  font-weight: bold;
+}
+
+th{
+  border: 2px solid black;
+  font-weight: bold;
+}
+
+thead > tr:first-child {
+  background-color: #00ccff;
+  font-size: 1.2em;
+}
+
+.jugadorActual{
+  background-color: #ff3300;
+}
+
+/************************************************/
+
+/************ CASILLEROS¨***************/
+
+
+.vacio{
+  background-color: white;
+}
+
+.cruz {
+  background-image: url("../images/cruz.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.circulo {
+  background-image: url("../images/circulo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+/********************************/
+
+
+/************** PANTALLAS MENORES A 500px *************/
+@media screen and (max-width:500px) {
+
+  .formConfiguracion{
+     font-size: 0.8em;
+     width: 96%;
+     height: 97%;
+     padding-left: 2%;
+  }
+
+  .seccionJuego{
+    grid-template-rows: 70% 30%;
+  }
+
+  .tablaJugadores{
+    top: 10%;
+    left: 20%;
+    width: 60%;
+  }
+ 
+}
+
+/************** PANTALLAS ENTRE 501 y 1024 px *************/
+@media screen and (min-width:501px) and (max-width:1024px) {
+  .formConfiguracion{
+    font-size: 1em;
+    position: absolute;
+    top: 10%;
+    left: 13%;
+    width: 70%;
+    height: 70%;
+  }
+
+  .seccionJuego{
+    grid-template-columns: 60% 40%;
+  }
+
+  .tablaJugadores{
+    width: 90%;
+  }
+ 
+}
+
+/************** PANTALLAS MAYORES A 1024 px *************/
+@media screen and (min-width:1025px) {
+  .formConfiguracion{
+    position: absolute;
+    top: 15%;
+    left: 18%;
+    width: 60%;
+    height: 60%;
+    font-size: 1.2em;
+  }
+
+  .seccionJuego{
+    grid-template-columns: 70% 30%;
+  }
+
+  .tablaJugadores{
+    width: 80%;
+  }
+ 
+}
